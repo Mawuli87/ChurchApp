@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_about">
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.messieyawo.churchapp.ui.About.AboutFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_about" >
+
+        <action
+            android:id="@+id/action_all_dishes_to_dish_details"
+            app:destination="@id/captureMediaActivity" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment"
+        android:name="com.messieyawo.churchapp.ui.Payments.PaymentFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_payment" />
+
+    <fragment
+        android:id="@+id/navigation_watch"
+        android:name="com.messieyawo.churchapp.ui.Watch.WatchFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_watch" />
+    <activity
+        android:id="@+id/captureMediaActivity"
+        android:name="com.messieyawo.churchapp.ui.capture.CaptureMediaActivity"
+        android:label="activity_capture_media"
+        tools:layout="@layout/activity_capture_media" />
+</navigation>
